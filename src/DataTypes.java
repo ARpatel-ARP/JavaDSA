@@ -2,6 +2,11 @@ public class DataTypes {
     static void main(){
         //Numeric DT - byte, int, short, long
         byte num1  = 127;
+
+        // implicit conv.
+        long impnum = num1;
+        System.out.println(impnum);
+
         System.out.println(num1);
         // but byte num = 500 will throw error (range = -128 to 127)
         short num2 = 32767;
