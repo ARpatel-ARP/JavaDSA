@@ -31,6 +31,15 @@ public class DataTypes {
         System.out.println("The first character is:" + firstCharacter);
         System.out.println("The first character is:" + (char)(firstCharacter+2)); // explicit conversion
 
+        // explicit conversion
+        long value1 = 676767676;
+        int value2 = (int)value1;
+        System.out.println(value2);
+
+//        long valuee1 = 67676767688;
+//        int valuee2 = (int)valuee1;
+//        System.out.println(valuee2); will throw error : java: integer number too large
+
 
     }
 }
