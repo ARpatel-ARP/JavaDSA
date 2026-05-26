@@ -23,17 +23,37 @@ public class Pattern_printing {
 //            System.out.println();
 //        }
             int n = 5;
-        for (int i =1; i<=n; i++ ){
-            // for the spaces:
-            for (int j =1; j<=n-i; j++){
+//        for (int i =1; i<=n; i++ ){
+//            // for the spaces:
+//            for (int j =1; j<=n-i; j++){
+//                System.out.print("  ");
+//            }
+//            // for the *'s
+//            for (int k =1; k<=n; k++){
+//                System.out.print(" * ");
+//            }
+//            System.out.println(); // next ln
+//
+//        }
+        // PATTERN 5:
+//        for (int i=1; i<=5; i++){
+//            for (int j=1; j<=5-i+1; j++ ){
+//                System.out.print(" * ");
+//            }
+//            System.out.println();
+//        }
+        //Pattern : 6
+
+        for (int i=1; i<=5; i++ ){
+            // for spaces
+            for (int j=1; j<=5-i; j++ ){
                 System.out.print("  ");
             }
-            // for the *'s
-            for (int k =1; k<=n; k++){
-                System.out.print(" * ");
+            // for star
+            for (int k=1; k<=2*i-1; k++){
+                System.out.print("* ");
             }
-            System.out.println(); // next ln
-            
+            System.out.println();
         }
     }
 }
