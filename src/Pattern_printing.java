@@ -16,11 +16,24 @@ public class Pattern_printing {
 //            System.out.println();
 //        }
         // PATTERN : 3
-        for (int row = 1; row<=5; row++ ){
-            for (int col= 1; col<=row; col++){
+//        for (int row = 1; row<=5; row++ ){
+//            for (int col= 1; col<=row; col++){
+//                System.out.print(" * ");
+//            }
+//            System.out.println();
+//        }
+            int n = 5;
+        for (int i =1; i<=n; i++ ){
+            // for the spaces:
+            for (int j =1; j<=n-i; j++){
+                System.out.print("  ");
+            }
+            // for the *'s
+            for (int k =1; k<=n; k++){
                 System.out.print(" * ");
             }
-            System.out.println();
+            System.out.println(); // next ln
+            
         }
     }
 }
