@@ -72,14 +72,34 @@ public class Pattern_printing {
 //
 //        }
         //PATTERN : 8 (HOLLOW TRIANGLE)
+//        for (int row=1; row<=5; row++){
+//            if (row==1 || row==2 || row==5){
+//                for (int col=1; col<=row; col++){
+//                    System.out.print("* ");
+//                }
+//            } else {
+//                System.out.print("* ");
+//                for (int col =1; col<=(row-2); col++){
+//                    System.out.print("  ");
+//                }
+//                System.out.print("* ");
+//            }
+//            System.out.println();
+//        }
+        // PATTERN : 9
         for (int row=1; row<=5; row++){
-            if (row==1 || row==2 || row==5){
-                for (int col=1; col<=row; col++){
+            //pt-1 spaces
+            for (int col=1; col<=(5-row); col++){
+                System.out.print("  ");
+            }
+            // pt-2 star space star
+            if (row==1 || row==5){
+                for (int col=1; col<=(2*row-1); col++){
                     System.out.print("* ");
                 }
-            } else {
+            }else {
                 System.out.print("* ");
-                for (int col =1; col<=(row-2); col++){
+                for (int col=1; col<=(2*row-3); col++){
                     System.out.print("  ");
                 }
                 System.out.print("* ");
