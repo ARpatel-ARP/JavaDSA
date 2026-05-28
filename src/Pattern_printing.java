@@ -207,12 +207,23 @@ public class Pattern_printing {
 //            System.out.println();
 //        }
         //PATTERN : 14
-        int n=5;
-        int count=1;
+//        int n=5;
+//        int count=1;
+//        for (int row=1; row<=n; row++){
+//            for (int col=1; col<=row; col++){
+//                System.out.print(count + " ");
+//                count++;
+//            }
+//            System.out.println();
+//        }
+        //PATTERN : 15
+        int n =5;
         for (int row=1; row<=n; row++){
             for (int col=1; col<=row; col++){
-                System.out.print(count + " ");
-                count++;
+             int b = ('A' - 1);
+             int ans = col+b;
+             char finalAns = (char)ans;
+                System.out.print(finalAns + " ");
             }
             System.out.println();
         }
