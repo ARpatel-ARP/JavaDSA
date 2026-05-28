@@ -56,20 +56,35 @@ public class Pattern_printing {
 //            System.out.println();
 //        }
         // PATTERN : 7 (Hollow square)
-        for (int row=1; row<=4; row++){
-            for (int col=1; col<=6; col++){
-                if (row == 1 || row == 4){
+//        for (int row=1; row<=4; row++){
+//            for (int col=1; col<=6; col++){
+//                if (row == 1 || row == 4){
+//                    System.out.print("* ");
+//                } else {
+//                    if (col == 1 || col == 6){
+//                        System.out.print("* ");
+//                    } else {
+//                        System.out.print("  ");
+//                    }
+//                }
+//            }
+//            System.out.println();
+//
+//        }
+        //PATTERN : 8 (HOLLOW TRIANGLE)
+        for (int row=1; row<=5; row++){
+            if (row==1 || row==2 || row==5){
+                for (int col=1; col<=row; col++){
                     System.out.print("* ");
-                } else {
-                    if (col == 1 || col == 6){
-                        System.out.print("* ");
-                    } else {
-                        System.out.print("  ");
-                    }
                 }
+            } else {
+                System.out.print("* ");
+                for (int col =1; col<=(row-2); col++){
+                    System.out.print("  ");
+                }
+                System.out.print("* ");
             }
             System.out.println();
-
         }
     }
 }
