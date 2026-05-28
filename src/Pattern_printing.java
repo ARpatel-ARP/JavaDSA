@@ -247,6 +247,11 @@ public class Pattern_printing {
             for (int col=1; col<=row; col++){
                 System.out.print(col + " ");
             }
+            int decRowValue = row-1;
+            for (int col=1; col<=row-1; col++){
+                System.out.print(decRowValue + " ");
+                decRowValue--;
+            }
             System.out.println();
         }
 
