@@ -199,10 +199,20 @@ public class Pattern_printing {
 //
 //        }
         // PATTERN :13
-        int n=4;
+//        int n=4;
+//        for (int row=1; row<=n; row++){
+//            for (int col=1; col<=row; col++){
+//                System.out.print(col);
+//            }
+//            System.out.println();
+//        }
+        //PATTERN : 14
+        int n=5;
+        int count=1;
         for (int row=1; row<=n; row++){
             for (int col=1; col<=row; col++){
-                System.out.print(col);
+                System.out.print(count + " ");
+                count++;
             }
             System.out.println();
         }
