@@ -55,11 +55,21 @@ public class Pattern_printing {
 //            }
 //            System.out.println();
 //        }
-        // PATTERN : 7
-        for (int i=1; i<=4; i++){
-        for (int j=1; j<=4; j++){
-            System.out.print("$ ");
-        }
+        // PATTERN : 7 (Hollow square)
+        for (int row=1; row<=4; row++){
+            for (int col=1; col<=6; col++){
+                if (row == 1 || row == 4){
+                    System.out.print("* ");
+                } else {
+                    if (col == 1 || col == 6){
+                        System.out.print("* ");
+                    } else {
+                        System.out.print("  ");
+                    }
+                }
+            }
+            System.out.println();
+
         }
     }
 }
