@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Arrays {
+public class Arrays_1D {
     static void main() {
         int[] arr = new int[5];
         int n = arr.length;
