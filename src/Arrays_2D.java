@@ -61,17 +61,29 @@ public class Arrays_2D {
 //        System.out.println(sum);
 
          // for multiplying
-        int mul = 1;
+//        int mul = 1;
+//        for (int i = 0; i < arr.length; i++) {
+//            for (int j = 0; j < arr[i].length; j++) {
+//                arr[i][j] = sc.nextInt();
+//                int value = arr[i][j];
+//                mul = mul*value;
+//            }
+//        }
+//        System.out.println(mul);
+
+        // for finding maxValue
+        int maxValue = arr[0][0];
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[i].length; j++) {
                 arr[i][j] = sc.nextInt();
-                int value = arr[i][j];
-                mul = mul*value;
+                if (arr[i][j]>maxValue){
+                    maxValue = arr[i][j];
+                }
+
             }
         }
-        System.out.println(mul);
+        System.out.println(maxValue);
 
-        // for finding maxValue
 
 
     }
