@@ -1,7 +1,16 @@
 import java.util.Scanner;
 
 public class StringBasics {
+    static void printString(String str) {
+        int n = str.length();
+        for (int i = 0; i <=n-1; i++) {
+            char ch = str.charAt(i);
+            System.out.println(ch);
+        }
+    }
         static void main() {
+        String str = "RautAnky";
+        printString(str);
             // string creation
 //            String firstName = "Ankit";
 //            String lastName =  new String("Raut");
@@ -43,7 +52,7 @@ public class StringBasics {
 //            System.out.println(name.toLowerCase());
 
 //            // SubString
-            String str = "They call me RAUT";
+//            String str = "They call me RAUT";
 //            System.out.println(str.substring(13, 17)); // prints RAUT
 
 //            // CONTAIN and startsWith , endswith
