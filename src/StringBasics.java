@@ -1,4 +1,6 @@
-    public class StringBasics {
+import java.util.Scanner;
+
+public class StringBasics {
         static void main() {
             // string creation
 //            String firstName = "Ankit";
@@ -7,8 +9,11 @@
 //            System.out.println(firstName.length());
 //            System.out.println(firstName.charAt(1));
             // String comparison
-            String newName = "Ankit";
-            String secondName = "ANKIT";
+            Scanner sc = new Scanner(System.in);
+            System.out.println("enter the First Name");
+            String newName = sc.next();
+            System.out.println("enter the First Name");
+            String secondName = sc.next();
             if (newName == secondName ){
                 System.out.println("refers to same literal in string pool");
             }else if (newName.equals(secondName)){
