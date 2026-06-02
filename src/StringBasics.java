@@ -67,9 +67,8 @@ public class StringBasics {
             for (String sr: srr){
                 System.out.println("word:" + sr );
             }
-
-
-
-
+            // REPLACE :
+            name = input.replace('r', 'x');
+            System.out.println(name);
         }
     }
