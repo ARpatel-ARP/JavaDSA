@@ -57,9 +57,15 @@ public class StringBasics {
 //            System.out.println(num + 1); // adds one
 //            System.out.println(strr + 1); // concatenate one
             // STRING INTO CHAR ARR
-            char[] crr = name.toCharArray();
-            for (char ch: crr){
-                System.out.println("value = " + ch);
+//            char[] crr = name.toCharArray();
+//            for (char ch: crr){
+//                System.out.println("value = " + ch);
+//            }
+            // Splits into words
+            String input = "I AM the danger kyler";
+            String[] srr = input.split(" ");
+            for (String sr: srr){
+                System.out.println("word:" + sr );
             }
 
 
