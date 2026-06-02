@@ -8,9 +8,51 @@ public class StringBasics {
             System.out.println(ch);
         }
     }
+
+    static int getLengthOfString(String str) {
+        char[] ch = str.toCharArray();
+        return ch.length;
+    }
+
+    static int getVowelsCount(String str) {
+        int count = 0;
+        for (int i = 0; i <str.length(); i++) {
+            char ch = str.charAt(i);
+            if (ch == 'a' || ch == 'e' || ch=='i' || ch=='o' || ch=='u'){
+                count++;
+            }
+        }
+        return count;
+    }
+
+    static String revString(String str) {
+        String rev = "";
+        for (int i = str.length() -1; i >= 0; i--) {
+            char ch = str.charAt(i);
+            rev = rev + ch;
+        }
+        return rev;
+    }
+
+    static Boolean palindromeOfString() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the string");
+         String srng = sc.next();
+        String rev = "";
+        for (int i = srng.length() - 1; i >= 0; i--) {
+            char ch = srng.charAt(i);
+            rev = rev + ch;
+
+        } return rev.equalsIgnoreCase(srng);
+    }
+
         static void main() {
         String str = "RautAnky";
         printString(str);
+            System.out.println(getLengthOfString(str));
+            System.out.println(getVowelsCount(str));
+            System.out.println(revString(str));
+            System.out.println(palindromeOfString());
             // string creation
 //            String firstName = "Ankit";
 //            String lastName =  new String("Raut");
@@ -71,13 +113,13 @@ public class StringBasics {
 //                System.out.println("value = " + ch);
 //            }
             // Splits into words
-            String input = "I AM the danger kyler";
-            String[] srr = input.split(" ");
-            for (String sr: srr){
-                System.out.println("word:" + sr );
+//            String input = "I AM the danger kyler";
+//            String[] srr = input.split(" ");
+//            for (String sr: srr){
+//                System.out.println("word:" + sr );
             }
             // REPLACE :
-            name = input.replace('r', 'x');
-            System.out.println(name);
+//            name = input.replace('r', 'x');
+//            System.out.println(name);
         }
-    }
+
