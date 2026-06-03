@@ -44,12 +44,29 @@ public class Basic_Maths {
         }
         System.out.println(ans);
     }
+
+    static Boolean palindromeNum(int num) {
+        int ans = 0;
+        int original = num;
+        while (num!=0){
+            ans = ans*10;
+            int digit = num%10;
+            ans = digit + ans ;
+            num = num/10;
+        }
+        if (ans!=original){
+            return false;
+        } else {
+        return true;
+        }
+    }
     static void main() {
-        int num = 53467;
+        int num = 121;
 //        printDigOfNum(num);
 //        printDigInRev(num);
 //        System.out.println(sumOfDigs(num));
-        revNumber(num);
+//        revNumber(num);
+        System.out.println(palindromeNum(num));
     }
 
 }
