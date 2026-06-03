@@ -62,14 +62,32 @@ public class Basic_Maths {
     }
 
     static Boolean primeNum(int num) {
-        for (int i = 2; i < num-1; i++) {
+        // optimized way :
+        for (int i = 2; i <= (num^1/2) ; i++) {
             if (num%i==0){
-                System.out.println(num + "is not a prime No.");
+                System.out.println(num + " is not a prime No.");
                 return false;
             }
+
         }
+//        for (int i = 2; i < num-1; i++) {
+//            if (num%i==0){
+//                System.out.println(num + "is not a prime No.");
+//                return false;
+//            }
+//        }
         System.out.println(num + "is a prime number");
                 return true;
+    }
+
+    static int GCDofNum(int a, int b) {
+        // gcd(a,b) = gcd(b, a%b)
+        while (b != 0){
+            int temp = b; // old value of b
+            b = a%b;
+            a = temp;
+        }
+        return a;
     }
     static void main() {
         int num = 11;
@@ -78,7 +96,8 @@ public class Basic_Maths {
 //        System.out.println(sumOfDigs(num));
 //        revNumber(num);
 //        System.out.println(palindromeNum(num));
-        System.out.println(primeNum(num));
+//        System.out.println(primeNum(num));
+        System.out.println(GCDofNum(18,12));
     }
 
 }
