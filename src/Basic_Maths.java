@@ -95,6 +95,20 @@ public class Basic_Maths {
         return (a*b)/gcd;
     }
 
+    static Boolean armStrong(int num) {
+        int sum = 0;
+        int orignal = num;
+        while (num!=0){
+            int digit = num%10;
+            int cubeOfDig = digit*digit*digit;
+            sum = sum + cubeOfDig;
+            num = num / 10;
+        }
+        if (sum!=orignal){
+            return false;
+        }
+        return true;
+    }
     static void main() {
         int num = 11;
 //        printDigOfNum(num);
@@ -104,6 +118,7 @@ public class Basic_Maths {
 //        System.out.println(palindromeNum(num));
 //        System.out.println(primeNum(num));
 //        System.out.println(GCDofNum(18,12));
-        System.out.println(GCDofNum(12,14));
+//        System.out.println(GCDofNum(12,14));
+        System.out.println(armStrong(153));
     }
 }
