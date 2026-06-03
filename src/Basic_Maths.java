@@ -63,7 +63,7 @@ public class Basic_Maths {
 
     static Boolean primeNum(int num) {
         // optimized way :
-        for (int i = 2; i <= (num^1/2) ; i++) {
+        for (int i = 2;  i <= Math.sqrt(num) ; i++) {
             if (num%i==0){
                 System.out.println(num + " is not a prime No.");
                 return false;
@@ -109,8 +109,39 @@ public class Basic_Maths {
         }
         return true;
     }
+
+    static Boolean perfectNum(int num) {
+        int sum =1;
+        for (int i = 2;  i <= Math.sqrt(num); i++) {
+            if (num % i == 0){
+                // if i div num completely then
+                // what are factors ?
+                // firstFac --> i
+                // secondFac --> num/i = j
+                int firstFac = i;
+                int secondFac = num/i;
+                sum = sum + firstFac + secondFac;
+            }
+
+        }
+        if (sum == num){
+            return true;
+        }else {
+        return false;
+        }
+    }
+
+    static void printAllPrimes(int n) {
+        // 1 is not prime
+        for (int num = 2; num <= n; num++) {
+            boolean isPrime = primeNum(num);
+            if (isPrime == true){
+                System.out.println(num);
+            }
+        }
+    }
     static void main() {
-        int num = 11;
+//        int num = 11;
 //        printDigOfNum(num);
 //        printDigInRev(num);
 //        System.out.println(sumOfDigs(num));
@@ -119,6 +150,9 @@ public class Basic_Maths {
 //        System.out.println(primeNum(num));
 //        System.out.println(GCDofNum(18,12));
 //        System.out.println(GCDofNum(12,14));
-        System.out.println(armStrong(153));
+//        System.out.println(armStrong(153));
+//        System.out.println(perfectNum(6));
+        printAllPrimes(10);
     }
+
 }
