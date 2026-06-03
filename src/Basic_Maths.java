@@ -33,10 +33,23 @@ public class Basic_Maths {
         }
         return sum;
     }
+
+    static void revNumber(int num) {
+        int ans = 0;
+        while (num!=0){
+            ans = ans*10;
+            int digit = num%10;
+            ans = digit + ans;
+            num = num/10;
+        }
+        System.out.println(ans);
+    }
     static void main() {
         int num = 53467;
 //        printDigOfNum(num);
 //        printDigInRev(num);
-        System.out.println(sumOfDigs(num));
+//        System.out.println(sumOfDigs(num));
+        revNumber(num);
     }
+
 }
