@@ -60,13 +60,25 @@ public class Basic_Maths {
         return true;
         }
     }
+
+    static Boolean primeNum(int num) {
+        for (int i = 2; i < num-1; i++) {
+            if (num%i==0){
+                System.out.println(num + "is not a prime No.");
+                return false;
+            }
+        }
+        System.out.println(num + "is a prime number");
+                return true;
+    }
     static void main() {
-        int num = 121;
+        int num = 11;
 //        printDigOfNum(num);
 //        printDigInRev(num);
 //        System.out.println(sumOfDigs(num));
 //        revNumber(num);
-        System.out.println(palindromeNum(num));
+//        System.out.println(palindromeNum(num));
+        System.out.println(primeNum(num));
     }
 
 }
