@@ -89,6 +89,12 @@ public class Basic_Maths {
         }
         return a;
     }
+
+    static int lcmOf(int a, int b) {
+        int gcd = GCDofNum(a,b);
+        return (a*b)/gcd;
+    }
+
     static void main() {
         int num = 11;
 //        printDigOfNum(num);
@@ -97,7 +103,7 @@ public class Basic_Maths {
 //        revNumber(num);
 //        System.out.println(palindromeNum(num));
 //        System.out.println(primeNum(num));
-        System.out.println(GCDofNum(18,12));
+//        System.out.println(GCDofNum(18,12));
+        System.out.println(GCDofNum(12,14));
     }
-
 }
