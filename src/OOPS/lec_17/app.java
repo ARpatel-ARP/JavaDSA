@@ -20,12 +20,20 @@ public class App {
 //        A.study();
         // by parameterized constructor
         Student A = new Student(1,14,"sachin",144);
+//        System.out.println(A.id);
+//        System.out.println(A.age);
+//        System.out.println(A.name);
+//        System.out.println(A.nos);
+//        A.bunk();
+//        A.sleep();
+//        A.study();
+
+        // copy constructor
+        Student B = new Student(A);
         System.out.println(A.id);
         System.out.println(A.age);
         System.out.println(A.name);
         System.out.println(A.nos);
-        A.bunk();
-        A.sleep();
-        A.study();
+
     }
 }

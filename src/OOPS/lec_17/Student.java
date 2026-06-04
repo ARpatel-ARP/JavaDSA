@@ -13,11 +13,19 @@ public class Student {
     }
     // Parameterized ctor
     public Student(int id, int age, String name, int nos){
-        System.out.println("Student default ctor called");
+        System.out.println("Student param ctor called");
         this.id = id;
         this.age = age;
         this.name = name;
         this.nos = nos;
+    }
+    // Copy ctor
+    public Student(Student srcObj){
+        System.out.println("Student copy ctor called");
+        this.id = srcObj.id;
+        this.age = srcObj.age;
+        this.name = srcObj.name;
+        this.nos = srcObj.nos;
     }
 
 
