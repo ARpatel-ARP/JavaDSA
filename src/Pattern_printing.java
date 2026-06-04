@@ -1,3 +1,4 @@
+
 public class Pattern_printing {
     static void main() {
         // PATTERN :1

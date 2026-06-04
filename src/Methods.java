@@ -1,3 +1,5 @@
+package javabasics;
+
 public class Methods {
     static void print2KaTable (){
         for (int i=1; i<=10; i++){

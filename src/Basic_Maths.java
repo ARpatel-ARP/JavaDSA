@@ -1,3 +1,5 @@
+package javabasics;
+
 public class Basic_Maths {
 
     static void printDigOfNum(int num ) {

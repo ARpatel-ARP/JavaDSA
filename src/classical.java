@@ -1,3 +1,5 @@
+package javabasics;
+
 public class classical {
 // entry point
     public static  void  main(){

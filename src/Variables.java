@@ -1,3 +1,5 @@
+package javabasics;
+
 public class Variables {
     static  void main(){
         // define or initialize:

@@ -1,3 +1,5 @@
+package javabasics;
+
 public class DataTypes {
     static void main(){
         //Numeric DT - byte, int, short, long
