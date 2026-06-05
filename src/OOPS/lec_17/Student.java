@@ -14,8 +14,12 @@ public class Student {
     public int getAge() {
         return this.age;
     }
-    public int setAge(int a) {
-        return this.age = a;
+    public void setAge(int a) {
+        // extra layer of auth
+        if (a<50) {
+            this.age = a;
+        }
+        return;
     }
 
     //Constructors (default)
