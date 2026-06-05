@@ -19,7 +19,7 @@ public class App {
 //        A.sleep();
 //        A.study();
         // by parameterized constructor
-        Student A = new Student(1,14,"sachin",144);
+        Student A = new Student(1,14,"sachin",144, "tina");
 //        System.out.println(A.id);
 //        System.out.println(A.age);
 //        System.out.println(A.name);
@@ -34,6 +34,8 @@ public class App {
         System.out.println(A.age);
         System.out.println(A.name);
         System.out.println(A.nos);
+
+
 
     }
 }

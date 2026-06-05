@@ -6,18 +6,20 @@ public class Student {
     public int age;
     public String name;
     public int nos;
+    private  String gf;
 
     //Constructors (default)
     public Student(){
         System.out.println("Student default ctor called");
     }
     // Parameterized ctor
-    public Student(int id, int age, String name, int nos){
+    public Student(int id, int age, String name, int nos, String gf){
         System.out.println("Student param ctor called");
         this.id = id;
         this.age = age;
         this.name = name;
         this.nos = nos;
+        this.gf = gf;
     }
     // Copy ctor
     public Student(Student srcObj){
@@ -39,5 +41,8 @@ public class Student {
 
     public void bunk() {
         System.out.println(name + "Bunking");
+    }
+    private void gfChat(){
+        System.out.println(name + "Chatting");
     }
 }
