@@ -2,11 +2,18 @@ package OOPS.lec_17;
 
 public class Student {
     // Attributes
-    public int id;
-    public int age;
-    public String name;
-    public int nos;
+    private int id;
+    private int age;
+    private String name;
+    private int nos;
     private  String gf;
+
+    public String getName() {
+        return this.name;
+    }
+    public int getAge() {
+        return this.age;
+    }
 
     //Constructors (default)
     public Student(){

@@ -30,10 +30,10 @@ public class App {
 
         // copy constructor
         Student B = new Student(A);
-        System.out.println(A.id);
-        System.out.println(A.age);
-        System.out.println(A.name);
-        System.out.println(A.nos);
+        System.out.println(A.getName());
+        System.out.println(A.getAge());
+//        System.out.println(A.name);
+//        System.out.println(A.nos);
 
 
 
