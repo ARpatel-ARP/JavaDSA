@@ -14,6 +14,9 @@ public class Student {
     public int getAge() {
         return this.age;
     }
+    public int setAge(int a) {
+        return this.age = a;
+    }
 
     //Constructors (default)
     public Student(){
