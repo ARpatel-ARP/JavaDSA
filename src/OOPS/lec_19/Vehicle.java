@@ -19,9 +19,9 @@ public class Vehicle {
     }
 
     void starEng(){
-        System.out.printf("Engine is Staring of : ", name, model);
+        System.out.println("Engine is Staring of : " + name + " : " + model);
     }
     void stopEng(){
-        System.out.printf("Engine is Stopping of : ", name, model);
+        System.out.println("Engine is Stopping of : " + name + " : " + model);
     }
 }

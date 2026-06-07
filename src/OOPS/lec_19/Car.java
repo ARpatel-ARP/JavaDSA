@@ -12,7 +12,7 @@ public class Car extends Vehicle{
     }
 
 public void startAc() {
-    System.out.println("AC started of:" + name);
+    System.out.println("AC started of : " + name);
 
     }
 }
