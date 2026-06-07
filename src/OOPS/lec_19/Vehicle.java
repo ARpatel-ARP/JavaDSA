@@ -1,7 +1,7 @@
 package OOPS.lec_19;
 
 public class Vehicle {
-    public String name;
+    private String name;
     public String model;
     public int noOfTyres;
 
