@@ -6,6 +6,8 @@ public class Main {
 //        System.out.println(c.add(2,3));
 //        System.out.println(c.add(2,3, 5));
 
+        Circle c = new Circle();
+        c.draw();
 
     }
 }
