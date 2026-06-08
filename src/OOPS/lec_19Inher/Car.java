@@ -1,4 +1,4 @@
-package OOPS.lec_19;
+package OOPS.lec_19Inher;
 
 public class Car extends Vehicle{
     public String transmissionType;

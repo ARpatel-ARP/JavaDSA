@@ -1,4 +1,4 @@
-package OOPS.lec_19;
+package OOPS.lec_19Inher;
 
 public class main {
     public static void main(String[] args) {

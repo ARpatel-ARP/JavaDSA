@@ -1,4 +1,4 @@
-package OOPS.lec_17;
+package OOPS.lec_17cls_obj;
 
 public class Student {
     // Attributes

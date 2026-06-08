@@ -1,4 +1,4 @@
-package OOPS.lec_19.TypesOfINH;
+package OOPS.lec_19Inher.TypesOfINH;
 
 
 interface ProjectManager {
