@@ -7,7 +7,14 @@ public class Main {
 //        System.out.println(c.add(2,3, 5));
 
         Circle c = new Circle();
-        c.draw();
+        doDrawingStuff(c);
 
+        Rect r = new Rect();
+        doDrawingStuff(r);
+
+    }
+    //Dynamic Method Dispatch (Runtime Polymorphism)
+    public static void doDrawingStuff(Shape s) {
+        s.draw();
     }
 }
