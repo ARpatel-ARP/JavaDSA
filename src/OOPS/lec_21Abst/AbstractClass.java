@@ -4,7 +4,7 @@ package OOPS.lec_21Abst;
 //    abstract void fly();
 //    abstract void eat();
 //
-//    public void sleep() {
+//   private void sleep() {
 //        System.out.println("Bird is Sleeping");
 ////        same for all
 //    }
@@ -47,4 +47,4 @@ package OOPS.lec_21Abst;
 //        doBirdStuff(new Crow());
 //        }
 //    }
-//
+

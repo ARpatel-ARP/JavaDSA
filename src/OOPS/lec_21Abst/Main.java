@@ -9,8 +9,12 @@ package OOPS.lec_21Abst;
          System.out.println("Sleeping");
      }
 }
+ interface Walk { // uppr uppr se Concept bna diya
 
-class sparrow implements Bird {
+     void walking();
+}
+// multiple inh.
+class sparrow implements Bird, Walk {
 
     @Override
    public void fly() {
@@ -20,6 +24,10 @@ class sparrow implements Bird {
     @Override
     public void eat() {
         System.out.println("Sparrow eating");
+    }
+
+    public void walking() {
+        System.out.println("Sparrow walking");
     }
 }
 class Crow implements Bird {
