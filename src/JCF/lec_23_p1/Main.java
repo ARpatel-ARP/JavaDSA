@@ -1,9 +1,6 @@
 package JCF.lec_23_p1;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -39,12 +36,45 @@ public class Main {
         while (iterator.hasNext()){
             System.out.println("Element : " + iterator.next());
         }
+//      set and get
+        List<Integer> list3 = new ArrayList<>();
+        list3.add(10);
+        list3.add(20);
+        list3.add(30);
+        System.out.println(list3.get(2)); // gives 30
+        System.out.println("Before Set : " + list3);
+        list3.set(2,40);
+        System.out.println("After Set : " + list3);
+//          toArray()
+        Object[] arr = list3.toArray();
+        for (Object obj: arr){
+            System.out.println(obj);
+        }
+        // contains checks :
+        System.out.println(list3.contains(20)); // true
 
+        List<Integer> coll = new ArrayList<>();
+        coll.add(10);
+        coll.add(130);
+        coll.add(20);
+        coll.add(12);
+        coll.add(110);
+        Collections.sort(coll);
+        System.out.println("sorted : " +  coll);
+        List<Integer> rev = coll.reversed();
+        System.out.println(rev);
 
-
+        // cloning a list
+        ArrayList<Integer> newList = (ArrayList<Integer>)list.clone();
+        System.out.println("original list : " + list);
+        System.out.println("Clone : " + newList);
+        ArrayList<Integer> marks = new ArrayList<>();
+        marks.ensureCapacity(100);
+        System.out.println(marks.isEmpty());
+        System.out.println(newList.indexOf(20));
 
 //        List<Integer> list = new ArrayList<>();
-//        Collection<Integer> coll = new ArrayList<>();
+//
 
 
     }
