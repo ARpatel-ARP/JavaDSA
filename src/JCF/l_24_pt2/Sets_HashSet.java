@@ -1,7 +1,9 @@
 package JCF.l_24_pt2;
 
 import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.Set;
+import java.util.TreeSet;
 
 public class Sets_HashSet {
     static void main(String[] args) {
@@ -30,6 +32,28 @@ public class Sets_HashSet {
 
         // does set 1 contain all elements of set 2 ??
         System.out.println(set1.containsAll(set2));
+
+        // IMPLEMENTATION BY LINKED LIST - if you want to preserve order and avoid dupl
+        Set<Integer> st = new LinkedHashSet<>();
+        st.add(30);
+        st.add(40);
+        st.add(60);
+        st.add(330);
+        st.add(40);
+        st.add(3220);
+        System.out.println(st);
+
+        // gives output as in sorted order:
+        Set<Integer> st2 = new TreeSet<>();
+        st2.add(40);
+        st2.add(30);
+        st2.add(60);
+        st2.add(3220);
+        st2.add(40);
+        st2.add(330);
+        System.out.println(st2);
+
+
 
 
 
