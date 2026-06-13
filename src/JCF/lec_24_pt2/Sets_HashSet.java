@@ -1,11 +1,6 @@
-package JCF.l_24_pt2;
-
-import OOPS.lec_17cls_obj.Student;
+package JCF.lec_24_pt2;
 
 import java.util.HashSet;
-import java.util.LinkedHashSet;
-import java.util.Set;
-import java.util.TreeSet;
 
 public class Sets_HashSet {
     static void main(String[] args) {

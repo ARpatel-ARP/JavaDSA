@@ -1,4 +1,4 @@
-package JCF.l_24_pt2;
+package JCF.lec_24_pt2;
 
 import java.util.PriorityQueue;
 import java.util.Queue;
