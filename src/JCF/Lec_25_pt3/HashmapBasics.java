@@ -1,7 +1,6 @@
 package JCF.Lec_25_pt3;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class HashmapBasics {
     static void main(String[] args) {
@@ -38,5 +37,23 @@ public class HashmapBasics {
         System.out.println(table.getOrDefault("mex", "not there"));
         System.out.println(table.containsKey("In"));
         System.out.println(table.containsValue("Mexico"));
+
+        System.out.println(table);
+        // Replace
+        table.replace("In", "Indonesia");
+        System.out.println(table);
+        // keySet() : returns a SET of keys
+        Set<String> keySet = table.keySet();
+        System.out.println(keySet);
+        // values() : returns COLLECTION of values
+        Collection<String > valuesColl = table.values();
+        System.out.println(valuesColl);
+        // keySet : returns  SET of key value pairs
+        Set<Map.Entry<String, String>> kvalues = table.entrySet();
+        System.out.println(kvalues);
+
+        // Iter
+
+
     }
 }
