@@ -5,6 +5,8 @@ import java.util.*;
 public class HashmapBasics {
     static void main(String[] args) {
         Map<String, String> mapping = new HashMap<>();
+//        Map<String, String> mapping = new LinkedHashMap<>(); // preserves the insertion order
+//        Map<String, String> mapping = new TreeMap<>(); // maintains sorted order
         // insertion : put and putAll
         mapping.put("In", "India");
 //        mapping.put("In", "India2"); // value will get updated
@@ -52,8 +54,10 @@ public class HashmapBasics {
         Set<Map.Entry<String, String>> kvalues = table.entrySet();
         System.out.println(kvalues);
 
-        // Iter
-
+        // Iterating over maps
+        for (Map.Entry<String, String > entry : table.entrySet()){
+            System.out.println("Keys : " + entry.getKey() + "  |  Values : " + entry.getValue());
+        }
 
     }
 }
