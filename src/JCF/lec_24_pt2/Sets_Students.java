@@ -5,11 +5,6 @@ import java.util.Objects;
 public class Sets_Students {
     public int rollNo;
     public String name;
-
-
-
-
-
     public Sets_Students(int rollNo, String name) {
         this.rollNo = rollNo;
         this.name = name;
