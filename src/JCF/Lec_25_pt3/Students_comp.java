@@ -1,6 +1,6 @@
 package JCF.Lec_25_pt3;
 
-public class Students_comp implements Comparable<Students_comp> {
+public class Students_comp {
     public int age;
     public String name;
     public int weight;
@@ -44,15 +44,15 @@ public class Students_comp implements Comparable<Students_comp> {
     }
 
 
-    @Override
-    public int compareTo(Students_comp that) {
-        // called for current obj (this)
-        // def sorting logic
-
-        // sort if same age
-        if (this.age == that.age){
-            return this.name.compareTo(that.name);
-        }
-        return this.age - that.age;
-    }
+//    @Override
+//    public int compareTo(Students_comp that) {
+//        // called for current obj (this)
+//        // def sorting logic
+//
+//        // sort if same age
+//        if (this.age == that.age){
+//            return this.name.compareTo(that.name);
+//        }
+//        return this.age - that.age;
+//    }
 }
