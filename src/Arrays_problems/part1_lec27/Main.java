@@ -59,7 +59,7 @@ public class Main {
         System.out.println("Sum of positive integers are : " + pos_sum);
         System.out.println("Sum of negative integers are : " + neg_sum);
     }
-    // count no of 0s and 1s
+    // p-6 : count no of 0s and 1s
     static void count0and1(int[] arr) {
         int countOf_1 = 0;
         int countOf_0 = 0;
@@ -75,16 +75,29 @@ public class Main {
         System.out.println("no of 1s in array are : " + countOf_1);
 
     }
+    // p-7 : find unsorted element
+    static int findUE(int[] arr, boolean ascending ) {
+        for (int i = 0;  i<arr.length; i ++){
+            if (ascending && arr[i] < arr[i+1]){
+                return arr[i];
+            } else if (!ascending && arr[i] > arr[i+1]) {
+                return arr[i];
+            }
+
+        }
+        return -1;
+    }
 
     static void main(String[] args) {
-        int[] arr = {1,0,1,0,0,0,1,1,1,1};
+        int[] arr = {1,2,3,4,5,1,2,4,5,6,};
 //        System.out.println(findAvgOfArr(arr));
 //        mulBy_10(arr);
 //        linSearch(arr, 5);
 //        System.out.println(findMax(arr));
 //        System.out.println(findMaxByMath_Max(arr));
 //        sumOfPosAndNeg(arr);
-        count0and1(arr);
+//        count0and1(arr);
+        System.out.println(findUE(arr, true));
     }
 
 }
