@@ -78,10 +78,10 @@ public class Main {
     // p-7 : find unsorted element
     static int findUE(int[] arr, boolean ascending ) {
         for (int i = 0;  i<arr.length; i ++){
-            if (ascending && arr[i] < arr[i+1]){
-                return arr[i];
-            } else if (!ascending && arr[i] > arr[i+1]) {
-                return arr[i];
+            if (ascending && !(arr[i] < arr[i+1])){
+                return arr[i+1];
+            } else if (!ascending && !(arr[i] > arr[i+1])) {
+                return arr[i+1];
             }
 
         }
@@ -89,7 +89,7 @@ public class Main {
     }
 
     static void main(String[] args) {
-        int[] arr = {1,2,3,4,5,1,2,4,5,6,};
+        int[] arr = {2,3,4,5,1,2,4,5,6,};
 //        System.out.println(findAvgOfArr(arr));
 //        mulBy_10(arr);
 //        linSearch(arr, 5);
