@@ -37,7 +37,7 @@ public class Main {
         }
         return max;
     }
-    //p-5
+    //p-4
     static int findMaxByMath_Max(int[] arr) {
         int max = arr[0];
         for (int num:arr){
@@ -45,22 +45,29 @@ public class Main {
         }
         return max;
     }
-//   p-6
+//   p-5
     static void sumOfPosAndNeg(int[] arr) {
         int pos_sum = 0;
         int neg_sum = 0;
         for (int num:arr){
-
+            if (num<0){
+                neg_sum = neg_sum + num;
+            } else if (num>0) {
+                pos_sum = pos_sum + num;
+            }
         }
+        System.out.println("Sum of positive integers are : " + pos_sum);
+        System.out.println("Sum of negative integers are : " + neg_sum);
     }
 
     static void main(String[] args) {
-        int[] arr = {1,4,5,3,2,5,7,5,3};
+        int[] arr = {1,-4,5,-3,2,-5,-7,5,3};
 //        System.out.println(findAvgOfArr(arr));
 //        mulBy_10(arr);
 //        linSearch(arr, 5);
         System.out.println(findMax(arr));
         System.out.println(findMaxByMath_Max(arr));
+        sumOfPosAndNeg(arr);
     }
 
 }
