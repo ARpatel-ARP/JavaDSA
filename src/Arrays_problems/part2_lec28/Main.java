@@ -28,20 +28,56 @@ public class Main {
     }
 
     // approach - 1 by reversing array
-    static void shiftRightByK_times(int[] arr, int k) {
+//    static void shiftRightByK_times(int[] arr, int k) {
+//        int n = arr.length;
+//        k = k%n;
+//        revArray(arr, 0, n-1);
+//        revArray(arr, 0 , k-1);
+//        revArray(arr, k, n-1);
+//        for (int num:arr){
+//            System.out.println(num);
+//        }
+//    }
+    // approach - 2 (by using temp array)
+    static void shiftRightByK_times(int[] arr, int k){
         int n = arr.length;
-        k = k%n;
-        revArray(arr, 0, n-1);
-        revArray(arr, 0 , k-1);
-        revArray(arr, k, n-1);
+        k = k % n;
+        int[] temp = new int[n];
+        for (int i = 0; i < n ; i++) {
+            temp[(i+k)%n] = arr[i];
+        }
+        for (int i = 0; i<n; i++){
+            arr[i] = temp[i];
+        }
         for (int num:arr){
             System.out.println(num);
         }
+
     }
+
+    static void printExtElementsAlt(int[] arr) {
+        int i = 0;
+        int n = arr.length;
+        int j = n-1;
+        while (i<=j){
+        if (i == j ){
+            System.out.println(arr[i]);
+            return;
+        } else {
+            System.out.println(arr[i]);
+            i++;
+            System.out.println(arr[j]);
+            j--;
+        }
+    }
+        }
+
+
     static void main(String[] args) {
         int[] arr = {2,3,4,5,6,};
 //        revArray(arr);
 //        shiftRightByOne(arr);
-        shiftRightByK_times(arr, 3);
+//        shiftRightByK_times(arr, 3);
+        printExtElementsAlt(arr);
     }
 }
