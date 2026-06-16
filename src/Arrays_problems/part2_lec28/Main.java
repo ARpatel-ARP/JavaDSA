@@ -1,10 +1,8 @@
 package Arrays_problems.part2_lec28;
 
 public class Main {
-    static void revArray(int[] arr) {
-        int i = 0;
-        int j = arr.length - 1;
-        while (i<=j){
+    static void revArray(int[] arr, int i, int j) {
+        while (i<j){
             // swap
             int temp = arr[i];
             arr[i] = arr[j];
@@ -13,9 +11,9 @@ public class Main {
             i++;
             j--;
         }
-        for (int k:arr){
-            System.out.println(k);
-        }
+//        for (int k:arr){
+//            System.out.println(k);
+//        }
     }
 
     static void shiftRightByOne(int[] arr) {
@@ -28,9 +26,22 @@ public class Main {
             System.out.println(k);
         }
     }
+
+    // approach - 1 by reversing array
+    static void shiftRightByK_times(int[] arr, int k) {
+        int n = arr.length;
+        k = k%n;
+        revArray(arr, 0, n-1);
+        revArray(arr, 0 , k-1);
+        revArray(arr, k, n-1);
+        for (int num:arr){
+            System.out.println(num);
+        }
+    }
     static void main(String[] args) {
         int[] arr = {2,3,4,5,6,};
 //        revArray(arr);
-        shiftRightByOne(arr);
+//        shiftRightByOne(arr);
+        shiftRightByK_times(arr, 3);
     }
 }
