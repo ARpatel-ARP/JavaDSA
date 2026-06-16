@@ -59,15 +59,32 @@ public class Main {
         System.out.println("Sum of positive integers are : " + pos_sum);
         System.out.println("Sum of negative integers are : " + neg_sum);
     }
+    // count no of 0s and 1s
+    static void count0and1(int[] arr) {
+        int countOf_1 = 0;
+        int countOf_0 = 0;
+        for (int num:arr){
+            if (num == 0){
+                countOf_0++ ;
+            }
+            else if (num == 1){
+                countOf_1++ ;
+            }
+        }
+        System.out.println("no of 0s in array are : " + countOf_0);
+        System.out.println("no of 1s in array are : " + countOf_1);
+
+    }
 
     static void main(String[] args) {
-        int[] arr = {1,-4,5,-3,2,-5,-7,5,3};
+        int[] arr = {1,0,1,0,0,0,1,1,1,1};
 //        System.out.println(findAvgOfArr(arr));
 //        mulBy_10(arr);
 //        linSearch(arr, 5);
-        System.out.println(findMax(arr));
-        System.out.println(findMaxByMath_Max(arr));
-        sumOfPosAndNeg(arr);
+//        System.out.println(findMax(arr));
+//        System.out.println(findMaxByMath_Max(arr));
+//        sumOfPosAndNeg(arr);
+        count0and1(arr);
     }
 
 }
