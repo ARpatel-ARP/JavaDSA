@@ -10,7 +10,7 @@ public class Main {
             arr[i] = arr[j];
             arr[j] = temp;
             // inc and dec
-            i++ ;
+            i++;
             j--;
         }
         for (int k:arr){
@@ -18,9 +18,19 @@ public class Main {
         }
     }
 
-
+    static void shiftRightByOne(int[] arr) {
+        int temp = arr[arr.length-1];
+        for (int i = arr.length -1 ; i > 0 ; i--) {
+            arr[i] = arr[i-1];
+        }
+        arr[0] = temp;
+        for (int k:arr){
+            System.out.println(k);
+        }
+    }
     static void main(String[] args) {
         int[] arr = {2,3,4,5,6,};
-        revArray(arr);
+//        revArray(arr);
+        shiftRightByOne(arr);
     }
 }
