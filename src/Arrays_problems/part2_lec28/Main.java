@@ -1,5 +1,7 @@
 package Arrays_problems.part2_lec28;
 
+import java.util.HashMap;
+
 public class Main {
     static void revArray(int[] arr, int i, int j) {
         while (i<j){
@@ -70,14 +72,37 @@ public class Main {
             j--;
         }
     }
+    }
+
+    static int getMode(int[] arr) {
+        HashMap<Integer, Integer> freq = new HashMap<>();
+        for (int num : arr) {
+            freq.put(num, freq.getOrDefault(num, 0) + 1);
         }
+//        for (int i : freq.keySet()){
+//            System.out.println(i + " -> " + freq.get(i));
+//        }
+        // find max
+        int maxFreq = -1;
+        int maxFreq_key = -1;
+        for (int key: freq.keySet()){
+            int currentKey = key;
+            int currentKey_Freq = freq.get(key);
+            if (currentKey_Freq > maxFreq){
+                maxFreq = currentKey_Freq;
+                maxFreq_key = currentKey;
+            }
+        }
+        return maxFreq_key;
+    }
 
 
     static void main(String[] args) {
-        int[] arr = {2,3,4,5,6,};
+        int[] arr = {2,2,2,33,3,3,3,4,5,5,4,4,4,4,4,4,4,4,4,4,4,4,4,5,6,};
 //        revArray(arr);
 //        shiftRightByOne(arr);
 //        shiftRightByK_times(arr, 3);
-        printExtElementsAlt(arr);
+//        printExtElementsAlt(arr);
+        System.out.println(getMode(arr));
     }
 }
