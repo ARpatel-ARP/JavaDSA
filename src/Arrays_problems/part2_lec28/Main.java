@@ -1,6 +1,7 @@
 package Arrays_problems.part2_lec28;
 
 import java.util.HashMap;
+import java.util.HashSet;
 
 public class Main {
     static void revArray(int[] arr, int i, int j) {
@@ -96,13 +97,60 @@ public class Main {
         return maxFreq_key;
     }
 
+    static int[] getHiAndLowFreq(int[] arr) {
+        HashMap<Integer, Integer> freq = new HashMap<>();
+        for (int num:arr){
+            freq.put(num, freq.getOrDefault(num, 0) + 1);
+        }
+        // hashmap done
+        // for highest :
+        int highFreq = Integer.MIN_VALUE;
+        int highFreq_Key = -1;
+        for (int key : freq.keySet()){
+            int currKey = key;
+           int currKey_freq = freq.get(key);
+           if (currKey_freq > highFreq){
+               highFreq = currKey_freq;
+               highFreq_Key = currKey;
+           }
+        }
+        int lowFreq = Integer.MAX_VALUE;
+        int lowFreq_key = -1;
+        for ( int key : freq.keySet()){
+            int currKey = key;
+            int currKey_freq = freq.get(key);
+            if (currKey_freq < lowFreq){
+                lowFreq = currKey_freq;
+                lowFreq_key = currKey;
+            }
+        }
+        return new int[]{highFreq_Key, lowFreq_key};
+    }
+
+    static void unionOfArrays(int[] arr1, int[] arr2) {
+        HashSet<Integer> union = new HashSet<>();
+        for (int num: arr1){
+            union.add(num);
+        }
+        for (int num : arr2 ){
+            union.add(num);
+        }
+        System.out.println(union);
+    }
+
 
     static void main(String[] args) {
-        int[] arr = {2,2,2,33,3,3,3,4,5,5,4,4,4,4,4,4,4,4,4,4,4,4,4,5,6,};
+        int[] arr1 = {2,2,2,33,3,3,3,4,5,5,4,4,4,4,4,4,4,4,4,4,4,4,4,5,6,};
+        int[] arr2 = {2,2,2,8,8,3,3,3,4,5,5,4,4,4,4,4,4,4,4,4,4,4,4,4,5,6,};
+        unionOfArrays(arr1, arr2);
+//        int[] ans = getHiAndLowFreq(arr);
+//        System.out.println("High freq key :" + ans[0]);
+//        System.out.println("Low freq key :" + ans[1]);
+
 //        revArray(arr);
 //        shiftRightByOne(arr);
 //        shiftRightByK_times(arr, 3);
 //        printExtElementsAlt(arr);
-        System.out.println(getMode(arr));
+//        System.out.println(getMode(arr));
     }
 }
