@@ -2,6 +2,7 @@ package Arrays_problems.part3_lec_29;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
 
@@ -37,13 +38,27 @@ public class Main {
        return xorSum;
 
     }
-    // if multip
+    // if multiple values missing
+    static List<Integer> mulMissing_Values(int[] arr, int n) {
+        boolean[] seen = new boolean[n+1];
+        for (int num : arr){
+            seen[num] = true;
+        }
+        List<Integer> missing = new ArrayList<>();
+        for (int i = 0; i <=n ; i++) {
+            if (!seen[i]){
+                missing.add(i);
+            }
+        }
+        return missing;
 
+    }
 
 
     static void main(String[] args) {
-        int[] arr = {0,2,4,5,1,6};
+        int[] arr = {0,2,4,5,1,6,8,10};
 //        arrange0and1s(arr);
-        System.out.println(missingNo_inArray(arr, 6));
+//        System.out.println(missingNo_inArray(arr, 6));
+        System.out.println(mulMissing_Values(arr, 10));
     }
 }
