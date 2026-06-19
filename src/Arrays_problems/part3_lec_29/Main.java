@@ -1,0 +1,49 @@
+package Arrays_problems.part3_lec_29;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
+public class Main {
+
+    static void arrange0and1s(int[] arr) {
+        int i = 0;
+        int j = arr.length - 1;
+        while(i<=j){
+            if (arr[i] == 1 && arr[j] == 0){
+                int temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+            if (arr[i] == 0){
+                i++;
+            }
+            if (arr[j] == 1){
+                j--;
+            }
+        }
+        for (int num:arr){
+            System.out.println(num);
+        }
+    }
+
+    static int missingNo_inArray(int[] arr, int n) {
+        int xorSum =0;
+       for (int i =0; i<=n; i++ ){
+           xorSum = xorSum ^ i;
+       }
+       for (int num:arr){
+           xorSum = xorSum ^ num;
+       }
+       return xorSum;
+
+    }
+    // if multip
+
+
+
+    static void main(String[] args) {
+        int[] arr = {0,2,4,5,1,6};
+//        arrange0and1s(arr);
+        System.out.println(missingNo_inArray(arr, 6));
+    }
+}
