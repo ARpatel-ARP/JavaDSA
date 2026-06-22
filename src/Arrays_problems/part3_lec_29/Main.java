@@ -34,6 +34,9 @@ public class Main {
        }
        for (int num:arr){
            xorSum = xorSum ^ num;
+           xorSum = xorSum ^ num;
+           xorSum = xorSum ^ num;
+           xorSum = xorSum ^ num;
        }
        return xorSum;
 
