@@ -38,6 +38,7 @@ public class Main {
        return xorSum;
 
     }
+
     // if multiple values missing
     static List<Integer> mulMissing_Values(int[] arr, int n) {
         boolean[] seen = new boolean[n+1];
@@ -54,11 +55,20 @@ public class Main {
 
     }
 
+    static int findUniqueElement(int[] arr) {
+        int ans = 0;
+        for (int num:arr){
+            ans = ans^num;
+        }
+        return ans;
+    }
+
 
     static void main(String[] args) {
-        int[] arr = {0,2,4,5,1,6,8,10};
+        int[] arr = {2,3,4,5,2,4,5};
 //        arrange0and1s(arr);
 //        System.out.println(missingNo_inArray(arr, 6));
-        System.out.println(mulMissing_Values(arr, 10));
+//        System.out.println(mulMissing_Values(arr, 10));
+        System.out.println(findUniqueElement(arr));
     }
 }
