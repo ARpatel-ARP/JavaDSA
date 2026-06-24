@@ -86,10 +86,24 @@ public class Main {
         return i+1;
     }
 
+    static int findFirstRepeating(int[] nums) {
+        HashMap<Integer, Integer> freq = new HashMap<>();
+        for (int num:nums){
+            freq.put(num, freq.getOrDefault(num,0) +1);
+        }
+        for(int i:nums){
+            if (freq.get(i) > 1){
+                return i;
+            }
+        }
+        return -1;
+    }
+
     static void main(String[] args) {
-        int[] nums = {2,1,2,2,2,3,4,5,5,4};
+        int[] nums = {2,1,3,4,5,5,4};
 //        System.out.println(Arrays.toString(twoSum(nums, 15)));
 //        System.out.println(threeSum(nums));
-        System.out.println(removeDupls(nums));
+//        System.out.println(removeDupls(nums));
+        System.out.println(findFirstRepeating(nums));
     }
 }
