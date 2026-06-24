@@ -1,6 +1,7 @@
 package Arrays_problems.part4_lec30;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class Main {
 
@@ -46,12 +47,10 @@ public class Main {
         for (int i = 0; i < n - 2; i++) {
             // skip duplicates
             if (i > 0 && nums[i] == nums[i - 1]) continue;
-
             int left = i + 1, right = n - 1;
 
             while (left < right) {
                 int sum = nums[i] + nums[left] + nums[right];
-
                 if (sum == 0) {
                     result.add(Arrays.asList(nums[i], nums[left], nums[right]));
                     // skip duplicates for left and right
@@ -69,9 +68,28 @@ public class Main {
         return result;
     }
 
+    static int removeDupls(int[] nums) {
+        Arrays.sort(nums);
+    int n = nums.length;
+    int i = 0;
+    int j = 1;
+       while (j<n){
+           if (nums[i] == nums[j]){
+               j++;
+           }
+           else {
+               i++;
+               nums[i] = nums[j];
+               j++;
+           }
+       }
+        return i+1;
+    }
+
     static void main(String[] args) {
-        int[] nums = {-6, 81, -15, -96,1,-1,0, 77, 92, 12, 3};
+        int[] nums = {2,1,2,2,2,3,4,5,5,4};
 //        System.out.println(Arrays.toString(twoSum(nums, 15)));
-        System.out.println(threeSum(nums));
+//        System.out.println(threeSum(nums));
+        System.out.println(removeDupls(nums));
     }
 }
