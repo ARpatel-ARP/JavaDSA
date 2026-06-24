@@ -27,9 +27,9 @@ public class Main {
                 for (int k = j+1; k <n ; k++) {
                     if (nums[i] + nums[j] + nums[k] == target){
                         List<Integer> temp = new ArrayList<>();
-                        temp.add(nums[i]);
-                        temp.add(nums[j]);
-                        temp.add(nums[k]);
+                        temp.add(i);
+                        temp.add(j);
+                        temp.add(k);
                         Collections.sort(temp);
                         result.add(temp);
                     }
@@ -37,8 +37,41 @@ public class Main {
             }
         }return new ArrayList<>(result);
     }
+    // More Optimized way :
+    static List<List<Integer>> threeSumOpt(int[] nums) {
+        List<List<Integer>> result = new ArrayList<>();
+        Arrays.sort(nums);
+        int n = nums.length;
+
+        for (int i = 0; i < n - 2; i++) {
+            // skip duplicates
+            if (i > 0 && nums[i] == nums[i - 1]) continue;
+
+            int left = i + 1, right = n - 1;
+
+            while (left < right) {
+                int sum = nums[i] + nums[left] + nums[right];
+
+                if (sum == 0) {
+                    result.add(Arrays.asList(nums[i], nums[left], nums[right]));
+                    // skip duplicates for left and right
+                    while (left < right && nums[left] == nums[left + 1]) left++;
+                    while (left < right && nums[right] == nums[right - 1]) right--;
+                    left++;
+                    right--;
+                } else if (sum < 0) {
+                    left++;
+                } else {
+                    right--;
+                }
+            }
+        }
+        return result;
+    }
+
     static void main(String[] args) {
-        int[] nums = {-6, 81, -15, -96, 77, 92, 12, 3};
-        System.out.println(Arrays.toString(twoSum(nums, 15)));
+        int[] nums = {-6, 81, -15, -96,1,-1,0, 77, 92, 12, 3};
+//        System.out.println(Arrays.toString(twoSum(nums, 15)));
+        System.out.println(threeSum(nums));
     }
 }
