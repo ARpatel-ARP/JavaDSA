@@ -99,11 +99,34 @@ public class Main {
         return -1;
     }
 
+    static int pivotElement(int[] nums) {
+        int n = nums.length;
+        int[] leftSum = new int[n];
+        int[] rightSum = new int[n];
+
+        leftSum[0] = nums[0];
+        for (int i = 1; i <n ; i++) {
+            leftSum[i] = leftSum[i-1] + nums[i];
+        }
+        rightSum[n-1] = nums[n-1];
+        for (int i = n-2; i >=0 ; i--) {
+            rightSum[i] = rightSum[i+1] + nums[i];
+        }
+        for (int i = 0; i <n ; i++) {
+            if (leftSum[i] == rightSum[i]){
+                return i;
+            }
+        }
+        return -1;
+    }
+
     static void main(String[] args) {
-        int[] nums = {2,1,3,4,5,5,4};
+//        int[] nums = {-5,18,-10,-12,-7,-12};
 //        System.out.println(Arrays.toString(twoSum(nums, 15)));
 //        System.out.println(threeSum(nums));
 //        System.out.println(removeDupls(nums));
-        System.out.println(findFirstRepeating(nums));
+//        System.out.println(findFirstRepeating(nums));
+        int[] nums = {1,7,3,6,5,6};
+        System.out.println(pivotElement(nums));
     }
 }
