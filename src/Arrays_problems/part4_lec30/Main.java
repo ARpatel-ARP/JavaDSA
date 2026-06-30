@@ -98,6 +98,18 @@ public class Main {
         }
         return -1;
     }
+    static int findFirstRepeating(int[] nums) {
+        HashMap<Integer, Integer> freq = new HashMap<>();
+        for (int num:nums){
+            freq.put(num, freq.getOrDefault(num,0) +1);
+        }
+        for(int i:nums){
+            if (freq.get(i) > 1){
+                return i;
+            }
+        }
+        return -1;
+    }
 
     static int pivotElement(int[] nums) {
         int n = nums.length;
