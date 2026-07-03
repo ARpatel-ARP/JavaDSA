@@ -1,6 +1,7 @@
 package Arrays_problems.lec33_2dArray;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Main {
@@ -57,11 +58,34 @@ public class Main {
         return res;
     }
 
+    static int[][] transposeMatrix(int[][] arr) {
+        if (arr == null || arr.length == 0){
+            return new int[0][0];
+        }
+        // old array
+        int rowLen = arr.length;
+        int colLen = arr[0].length;
+        // new array
+        int newRowLen = colLen;
+        int newColLen = rowLen;
+        int ans[][] = new int[newRowLen][newColLen];
+
+        for (int i = 0; i < rowLen ; i++) {
+            for (int j = 0; j < colLen; j++) {
+                ans[j][i] = arr[i][j];
+            }
+        }
+        return ans;
+
+
+    }
+
     static void main(String[] args) {
         int[][] arr = {{1,2,3}, {4,5,6}, {7,8,9}};
         int[][] nums = {{1,2,3}, {4,5,6}, {7,8,9}};
 //        System.out.println(rowSums(arr));
 //        System.out.println(colSum(nums));
-        System.out.println(wavePrint(arr));
+//        System.out.println(wavePrint(arr));
+        System.out.println(Arrays.deepToString(transposeMatrix(arr)));
     }
 }
