@@ -37,10 +37,31 @@ public class Main {
         return result;
     }
 
+    static List<Integer> wavePrint(int[][] arr) {
+        List<Integer> res = new ArrayList<>();
+        int n = arr[0].length;
+        int m = arr.length;
+
+        for (int i = 0; i < n; i++) {
+            if (i%2==0){
+                for (int j = 0; j <m ; j++) {
+                    res.add(arr[j][i]);
+                }
+            }else{
+                for (int j = m-1; j >=0 ; j--) {
+                    res.add(arr[j][i]);
+                }
+            }
+
+        }
+        return res;
+    }
+
     static void main(String[] args) {
         int[][] arr = {{1,2,3}, {4,5,6}, {7,8,9}};
         int[][] nums = {{1,2,3}, {4,5,6}, {7,8,9}};
-        System.out.println(rowSums(arr));
-        System.out.println(colSum(nums));
+//        System.out.println(rowSums(arr));
+//        System.out.println(colSum(nums));
+        System.out.println(wavePrint(arr));
     }
 }
