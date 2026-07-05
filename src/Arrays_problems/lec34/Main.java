@@ -8,10 +8,4 @@ public class Main {
     static void main(String[] args) {
 
     }
-    static void ma(String[] args) {
-
-    }
-    static void mai(String[] args) {
-
-    }
 }
