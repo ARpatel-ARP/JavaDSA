@@ -57,15 +57,21 @@ public class Main {
             }
                 endCol--;
             // row wise right to left
+            if (stRow<=endRow){
+
             for (int i = endCol; i >= stCol ; i--) {
                 result.add(arr[endRow][i]);
             }
                 endRow--;
+            }
             // col wise bottom to top
+            if (stCol<=endCol){
+
             for (int i = endRow; i >=stRow ; i--) {
                 result.add(arr[i][stCol]);
             }
                 stCol++;
+            }
 
         }
         return result;
