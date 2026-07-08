@@ -21,7 +21,6 @@ public class Main {
         }
         return ans;
     }
-
     static void main(String[] args) {
         int[] nums = {1,4,4,5,2,2};
         System.out.println(findDisappearedElement(nums));
