@@ -1,4 +1,4 @@
-package Arrays_problems.lec36;
+package Arrays_problems.lec36_BinSearch;
 
 public class Main {
     static int binSearch(int[] arr, int target) {
