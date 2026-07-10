@@ -33,6 +33,7 @@ public class Main {
                 s = mid +1;
             }
             else{
+                // arr[mid]>target
                 ans = mid;
                 e = mid -1;
             }
